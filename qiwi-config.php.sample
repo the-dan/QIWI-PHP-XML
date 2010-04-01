@@ -1,0 +1,55 @@
+<?php
+
+define('QIWI_BILL_CREATE_CLIENT', '1');
+define('QIWI_BILL_DONT_CREATE_CLIENT', '0');
+
+define('QIWI_BILL_LIFETIME_UNLIMITED', '0');
+
+$qiwiConfig = array(
+		    /**
+		     * Номер магазина в системе QIWI
+		     * https://ishop.qiwi.ru
+		     *
+		     **/
+		    'shopID' => '',
+		    'password' => '',
+		    /**
+		     * Время жизни счёта по умолчанию.
+		     * Задается в часах.
+		     * Если QIWI_BILL_LIFETIME_UNLIMITED,
+		     * то неограничени.
+		     * Неограничено = 45 суток.
+ 		     *
+		     **/
+		    'lifetime' => QIWI_BILL_LIFETIME_UNLIMITED,
+		    /**
+		     * Глобальный префикс для счетов.
+		     * Счета, которые создаются, отменяются,
+		     * проверяются через этот иодуль
+		     * будут иметь ID, начинающийся с этого
+		     * префикса.
+		     * 
+		     * Можно оставить пустым.
+		     *
+		     **/
+		    'txn-prefix' => 'QIWI-PHP-',
+		    /*
+		     * Использовать шифрование
+		     *
+		     */
+		    'encrypt' => TRUE,
+		    'url' => 'https://ishop.qiwi.ru/xml',
+		    /**
+		     * Если create-client = QIWI_BILL_CREATE_CLIENT, то
+		     * при выставлении счёта создается
+		     * пользователь в системе QIWI.
+		     * При этом оплатить счёт можно в терминале
+		     * наличными без ввода ПИН-кода.
+		     **/
+		    'create-client' => QIWI_BILL_CREATE_CLIENT,
+		    'alarm-sms' => '0',
+		    'alarm-call' => '0',
+		    'log' => FALSE
+);
+
+?>
