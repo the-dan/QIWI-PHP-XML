@@ -219,7 +219,7 @@ class QIWI {
     $x .= '<extra name="to-account">' . $options['phone'] . '</extra>';
     $x .= '<extra name="amount">' . $options['amount'] . '</extra>';
     $x .= '<extra name="comment">' . $options['comment'] . '</extra>';
-    $x .= '<extra name="create-agt">' . $options['create-client'] . '</extra>';
+    $x .= '<extra name="create-agt">' . $options['create-agt'] . '</extra>';
     $x .= '<extra name="ltime">' . $options['lifetime'] . '</extra>';
     $x .= '<extra name="ALARM_SMS">' . $options['alarm-sms'] . '</extra>';
     $x .= '<extra name="ACCEPT_CALL">' . $options['alarm-call'] . '</extra>';

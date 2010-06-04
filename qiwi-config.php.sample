@@ -46,7 +46,7 @@ $qiwiConfig = array(
 		     * При этом оплатить счёт можно в терминале
 		     * наличными без ввода ПИН-кода.
 		     **/
-		    'create-client' => QIWI_BILL_CREATE_CLIENT,
+		    'create-agt' => QIWI_BILL_CREATE_CLIENT,
 		    'alarm-sms' => '0',
 		    'alarm-call' => '0',
 		    'log' => FALSE
