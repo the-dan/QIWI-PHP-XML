@@ -56,7 +56,7 @@ class QIWIMcryptEncrypter {
 
 class QIWINativeEncrypter {
   function encrypt($message, $key) {
-    
+    return $message;
   }
 }
 
@@ -149,6 +149,9 @@ class QIWI {
 
 
   function encrypt($message) {
+    if (!$this->config['encrypt']) {
+      return $message;
+    }
     $n = 8 - strlen($message) % 8;      
     $pad = str_pad($message, strlen($message) + $n, ' ');
     $crypted = $this->encrypter->encrypt($pad, $this->key);
